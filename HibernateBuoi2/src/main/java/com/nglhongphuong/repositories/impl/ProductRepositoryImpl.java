@@ -43,7 +43,7 @@ public class ProductRepositoryImpl {
                 
                 String cateId = params.get("categoryId");
                 if(cateId != null && !cateId.isEmpty())
-                    predicates.add(b.equal(root.get("category").as(Integer.class), cateId));
+                    predicates.add(b.equal(root.get("categoryId").as(Integer.class), cateId));
                 q.where(predicates.toArray(Predicate[]::new));
                 
                 String sort = params.get("sort");

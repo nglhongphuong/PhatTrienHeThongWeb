@@ -20,7 +20,7 @@ public class HibernateBuoi2 {
        s.getCates().forEach(c -> System.out.println(c.getName()));
        ProductRepositoryImpl s2 = new ProductRepositoryImpl();
        Map<String, String> params = new HashMap<>();
-       params.put("sort","");
+       params.put("page", "1");
        
        s2.getProducts(params).forEach(p-> System.out.printf("%d - %s: %.1f\n", p.getId(), p.getName(), p.getPrice()));
        
